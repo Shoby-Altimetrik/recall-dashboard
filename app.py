@@ -50,13 +50,13 @@ def dashboard():
             gemini_prompt = f"""You are a data analyst. Analyze this dataset to generate insights, trends, and recommendations.
 
 Schema:
-{json.dumps(schema_info, indent=2, default=str)}
+{json.dumps(schema_info, separators=(',', ': '), default=str)}
 
 Descriptions:
-{json.dumps(column_descriptions, indent=2, default=str)}
+{json.dumps(column_descriptions, separators=(',', ': '), default=str)}
 
 Sample:
-{json.dumps(json_sample, indent=2, default=str)}
+{json.dumps(json_sample, separators=(',', ': '), default=str)}
 
 User Prompt:
 "{prompt}"
