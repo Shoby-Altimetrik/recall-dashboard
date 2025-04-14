@@ -167,6 +167,9 @@
                 <div class="spinner"></div>
                 <div>Running analysis with Gemini...</div>
             </div>
+            {% if prompt %}
+                <p style="margin-top: 0; font-size: 14px; color: #4b5563;"><strong>Prompt used:</strong> {{ prompt }}</p>
+            {% endif %}
             {{ dashboard|safe }}
         </div>
     </div>
